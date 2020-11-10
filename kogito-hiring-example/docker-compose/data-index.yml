@@ -1,0 +1,28 @@
+version: '2.1'
+
+services:
+#  kogito-data-index:
+#    container_name: kogito-data-index
+#    image: quay.io/kiegroup/kogito-data-index-infinispan:latest
+##    depends_on:
+##      - infinispan
+#    ports:
+#      - 8180:8180
+#    volumes:
+#      - ./persistence:/home/kogito/persistence
+#    command: [
+#    ]
+#    environment:
+#      KOGITO_DATA_INDEX_PROPS: -Dkogito.protobuf.folder=/home/kogito/persistence
+#      QUARKUS_INFINISPAN_CLIENT_SERVER_LIST: my-infinispan-server:11222
+
+  data-index:
+    container_name: data-index
+    image: quay.io/kiegroup/kogito-data-index-infinispan-nightly:latest
+    ports:
+      - 8180:8180
+    volumes:
+      - ./data-index/persistence:/home/kogito/data/protobufs
+    environment:
+      QUARKUS_INFINISPAN_CLIENT_SERVER_LIST: infinispan:11222
+      QUARKUS_KAFKA_BOOTSTRAP_SERVERS: kafka:9092

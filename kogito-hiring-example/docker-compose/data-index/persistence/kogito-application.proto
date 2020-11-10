@@ -1,0 +1,33 @@
+syntax = "proto2"; 
+package org.kie.kogito.app; 
+import "kogito-types.proto";
+
+message Candidate { 
+	option java_package = "org.kie.kogito.hr";
+	optional kogito.Date birthDay = 1; 
+	optional string email = 2; 
+	optional string lastName = 3; 
+	optional string name = 4; 
+}
+message FinalInterview { 
+	option java_package = "org.kie.kogito.hr";
+	optional bool hire = 1; 
+	optional int32 salary = 2; 
+}
+message HRInterview { 
+	option java_package = "org.kie.kogito.hr";
+	optional string comments = 1; 
+	optional int32 experience = 2; 
+	optional bool hire = 3; 
+	optional int32 salary = 4; 
+}
+message TechInterview { 
+	option java_package = "org.kie.kogito.hr";
+	optional string comments = 1; 
+	optional bool hire = 2; 
+	optional bool java = 3; 
+	optional bool javaScript = 4; 
+	optional bool kogito = 5; 
+	optional bool quarkus = 6; 
+	optional bool react = 7; 
+}

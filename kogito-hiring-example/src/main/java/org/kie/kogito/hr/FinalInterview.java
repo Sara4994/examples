@@ -5,6 +5,14 @@ public class FinalInterview {
     private int salary;
     private boolean hire;
 
+    public FinalInterview() {
+    }
+
+    public FinalInterview(int salary, boolean hire) {
+        this.salary = salary;
+        this.hire = hire;
+    }
+
     public int getSalary() {
         return salary;
     }

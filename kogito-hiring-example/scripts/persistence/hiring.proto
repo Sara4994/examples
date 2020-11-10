@@ -1,0 +1,77 @@
+syntax = "proto2"; 
+package org.kie.kogito.hr.hiring; 
+import "kogito-index.proto";
+import "kogito-types.proto";
+option kogito_model = "Hiring";
+option kogito_id = "hiring";
+
+/* @Indexed */ 
+message Candidate { 
+	option java_package = "org.kie.kogito.hr.hiring";
+	/* @Field(store = Store.YES) @SortableField */ 
+	optional kogito.Date birthDay = 1; 
+	/* @Field(store = Store.YES) @SortableField */ 
+	optional string email = 2; 
+	/* @Field(store = Store.YES) @SortableField */ 
+	optional string lastName = 3; 
+	/* @Field(store = Store.YES) @SortableField */ 
+	optional string name = 4; 
+}
+/* @Indexed */ 
+message FinalInterview { 
+	option java_package = "org.kie.kogito.hr.hiring";
+	/* @Field(store = Store.YES) @SortableField */ 
+	optional bool hire = 1; 
+	/* @Field(store = Store.YES) @SortableField */ 
+	optional int32 salary = 2; 
+}
+/* @Indexed */ 
+message HRInterview { 
+	option java_package = "org.kie.kogito.hr.hiring";
+	/* @Field(store = Store.YES) @SortableField */ 
+	optional string comments = 1; 
+	/* @Field(store = Store.YES) @SortableField */ 
+	optional int32 experience = 2; 
+	/* @Field(store = Store.YES) @SortableField */ 
+	optional bool hire = 3; 
+	/* @Field(store = Store.YES) @SortableField */ 
+	optional int32 salary = 4; 
+}
+/* @Indexed */ 
+message Hiring { 
+	option java_package = "org.kie.kogito.hr.hiring";
+	/* @Field(store = Store.YES) @SortableField
+ @VariableInfo(tags="") */ 
+	optional Candidate candidate = 1; 
+	/* @Field(store = Store.YES) @SortableField
+ @VariableInfo(tags="") */ 
+	optional FinalInterview final_interview = 2; 
+	/* @Field(store = Store.YES) @SortableField
+ @VariableInfo(tags="") */ 
+	optional HRInterview hr_interview = 3; 
+	/* @Field(store = Store.YES) @SortableField */ 
+	optional string id = 4; 
+	/* @Field(store = Store.YES) @SortableField
+ @VariableInfo(tags="") */ 
+	optional TechInterview tech_Interview = 5; 
+	/* @Field(store = Store.YES) @SortableField */ 
+	optional org.kie.kogito.index.model.KogitoMetadata metadata = 6; 
+}
+/* @Indexed */ 
+message TechInterview { 
+	option java_package = "org.kie.kogito.hr.hiring";
+	/* @Field(store = Store.YES) @SortableField */ 
+	optional string comments = 1; 
+	/* @Field(store = Store.YES) @SortableField */ 
+	optional bool hire = 2; 
+	/* @Field(store = Store.YES) @SortableField */ 
+	optional bool java = 3; 
+	/* @Field(store = Store.YES) @SortableField */ 
+	optional bool javaScript = 4; 
+	/* @Field(store = Store.YES) @SortableField */ 
+	optional bool kogito = 5; 
+	/* @Field(store = Store.YES) @SortableField */ 
+	optional bool quarkus = 6; 
+	/* @Field(store = Store.YES) @SortableField */ 
+	optional bool react = 7; 
+}

@@ -7,6 +7,16 @@ public class HRInterview {
     private String comments;
     private boolean hire;
 
+    public HRInterview() {
+    }
+
+    public HRInterview(int experience, int salary, String comments, boolean hire) {
+        this.experience = experience;
+        this.salary = salary;
+        this.comments = comments;
+        this.hire = hire;
+    }
+
     public int getExperience() {
         return experience;
     }

@@ -12,6 +12,16 @@ public class Candidate {
 
     private String email;
 
+    public Candidate() {
+    }
+
+    public Candidate(String name, String lastName, Date birthDay, String email) {
+        this.name = name;
+        this.lastName = lastName;
+        this.birthDay = birthDay;
+        this.email = email;
+    }
+
     public String getName() {
         return name;
     }

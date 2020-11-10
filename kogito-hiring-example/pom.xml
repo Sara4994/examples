@@ -9,7 +9,7 @@
 
   <properties>
     <quarkus.version>1.8.0.Final</quarkus.version>
-    <kogito.version>1.0.0-SNAPSHOT</kogito.version>
+    <kogito.version>2.0.0-SNAPSHOT</kogito.version>
     <surefire.version>2.22.2</surefire.version>
     <compiler.version>3.8.1</compiler.version>
 

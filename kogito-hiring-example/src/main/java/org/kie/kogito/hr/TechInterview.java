@@ -11,6 +11,19 @@ public class TechInterview {
     private String comments;
     private boolean hire;
 
+    public TechInterview() {
+    }
+
+    public TechInterview(boolean java, boolean javaScript, boolean react, boolean kogito, boolean quarkus, String comments, boolean hire) {
+        this.java = java;
+        this.javaScript = javaScript;
+        this.react = react;
+        this.kogito = kogito;
+        this.quarkus = quarkus;
+        this.comments = comments;
+        this.hire = hire;
+    }
+
     public boolean isJava() {
         return java;
     }
