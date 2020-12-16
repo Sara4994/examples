@@ -10,4 +10,4 @@ TASK_CONSOLE_RUNNER="https://repository.jboss.org/nexus/service/local/artifact/m
 
 wget -nc -O task-console-${TASK_CONSOLE_VERSION}-runner.jar ${TASK_CONSOLE_RUNNER}
 
-java -jar  -Dquarkus.http.port=8380 -Dquarkus.profile=keycloak -Dquarkus.http.cors=false -Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=1044 task-console-${TASK_CONSOLE_VERSION}-runner.jar
+java -jar  -Dquarkus.http.port=8380 -Dquarkus.profile=keycloak -Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=1044 task-console-${TASK_CONSOLE_VERSION}-runner.jar
